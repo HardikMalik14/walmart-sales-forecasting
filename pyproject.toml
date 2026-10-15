@@ -1,0 +1,18 @@
+[project]
+name = "sales-pred-engine"
+version = "1.0.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.115.12",
+  "uvicorn==0.34.2",
+  "pandas==2.3.3",
+  "numpy==2.2.6",
+  "scipy==1.15.3",
+  "scikit-learn==1.7.2",
+  "statsmodels==0.14.5",
+  "matplotlib==3.10.7",
+  "xgboost-cpu==3.2.0"
+]
+
+[tool.vercel]
+entrypoint = "index:app"

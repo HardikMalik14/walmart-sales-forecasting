@@ -219,7 +219,7 @@ source .venv/bin/activate
 # Windows (PowerShell)
 .venv\Scripts\Activate.ps1
 
-pip install -r requirements.txt
+pip install -r requirements-research.txt
 ```
 
 > `kagglehub` downloads public datasets without credentials. If Kaggle asks you to authenticate,
@@ -292,3 +292,24 @@ jupyter notebook notebooks/01_walmart_sales_eda.ipynb
 <div align="center">
 <sub>Built with pandas · statsmodels · pmdarima · Prophet · XGBoost · scikit-learn · matplotlib · seaborn</sub>
 </div>
+
+
+## Sales Pred Engine — portfolio web demo
+
+The original forecasting pipeline above is preserved. A FastAPI dashboard now
+provides an archived benchmark explorer and a separate live forecasting lab.
+
+- Explore the saved four-model benchmark, filter dates, and export predictions.
+- Generate synthetic Walmart-style data or upload weekly store sales CSVs.
+- Fit the original Seasonal Naive and XGBoost wrappers, evaluate a chronological
+  holdout, refit on full history, and forecast up to 16 future weeks.
+- Inspect forecast assumptions and export history, holdout, future predictions,
+  and a JSON report. These are computed from the selected input data.
+
+For the web demo, use Python 3.12 and `pip install -r requirements.txt`, then
+`uvicorn index:app --reload`. For all original research models and notebooks,
+use `requirements-research.txt`. For the full test suite, use
+`requirements-dev.txt` and run `python -m pytest tests -q`.
+
+See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for original-repository
+PowerShell deployment steps, upload requirements, and demo limitations.

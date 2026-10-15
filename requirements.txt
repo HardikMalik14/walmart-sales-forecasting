@@ -1,16 +1,9 @@
-# Pinned versions verified together (Python 3.11).
-pandas==3.0.2
-numpy==2.4.4
-statsmodels==0.15.0
-pmdarima==2.1.1
-prophet==1.4.0
-holidays==0.105
-xgboost==3.2.0
-scikit-learn==1.8.0
-matplotlib==3.10.9
-seaborn==0.13.2
-kagglehub==1.0.2
-pytest==9.1.1
-# Notebook tooling
-nbformat==5.11.1
-ipykernel==7.3.0
+fastapi==0.115.12
+uvicorn==0.34.2
+pandas==2.3.3
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+statsmodels==0.14.5
+matplotlib==3.10.7
+xgboost-cpu==3.2.0
